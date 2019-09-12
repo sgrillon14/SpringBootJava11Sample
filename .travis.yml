@@ -1,0 +1,15 @@
+language: java
+sudo: required
+dist: trusty
+install: true
+
+jdk:
+- oraclejdk8
+- openjdk8
+
+script:
+- mvn -e -U clean package
+
+cache:
+  directories:
+    - $HOME/.m2/repository
